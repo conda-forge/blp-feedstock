@@ -1,5 +1,5 @@
 {% set name = "blp" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/b/blp/blp-{{ version }}.tar.gz
-  sha256: dbfba36adcde8cac6b750a0f16b768003add3d0fadddb7968310b01d009f3d39 
+  sha256: 094c09b05fb006769f48309588f4200d593299b58566d03e6a188c16296cd98f
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
@@ -24,14 +24,14 @@ requirements:
     - blpapi
 
 test:
-    imports:
-        - blp
+  imports:
+    - blp
 
 about:
   home: https://github.com/matthewgilbert/blp
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Pythonic interface to Bloomberg Open API'
+  summary: Pythonic interface to Bloomberg Open API
 
 extra:
   recipe-maintainers:
