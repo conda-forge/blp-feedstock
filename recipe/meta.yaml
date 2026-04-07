@@ -1,13 +1,13 @@
 {% set name = "blp" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/b/blp/blp-{{ version }}.tar.gz
-  sha256: b025e9f58c47ef383132b9718e463de6c1274b61773c52f2b4cb9f340b9ee62f
+  url: https://pypi.org/packages/source/b/blp/blp-{{ version }}.tar.gz
+  sha256: 2c02a6a64640ef351577c1b006505cd2af6dbe290c7884d1b7918c812ef8827d
 
 build:
   number: 0
